@@ -1,2 +1,2 @@
-# SUPER-HerO
+# HerO2
 
