@@ -10,13 +10,6 @@ from vllm import LLM, SamplingParams
 from datetime import datetime, timedelta
 from itertools import islice
 
-# def truncate_chat_prompt(prompt: str, tokenizer, max_len: int) -> str:
-#     token_ids = tokenizer.encode(prompt, add_special_tokens=False)
-#     if len(token_ids) > max_len:
-#         token_ids = token_ids[:max_len]
-#         return tokenizer.decode(token_ids, add_special_tokens=False)
-#     else:
-#         return prompt
 
 def download_nltk_data(package_name, download_dir='nltk_data'):
     # Ensure the download directory exists
@@ -101,7 +94,7 @@ def main(args):
         model=args.model,
         tensor_parallel_size=gpu_count,
         max_model_len=8192,
-        gpu_memory_utilization=0.95,
+        gpu_memory_utilization=0.99,
         dtype=torch.bfloat16,
         enforce_eager=True,
         trust_remote_code=True,
