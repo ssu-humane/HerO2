@@ -14,7 +14,7 @@ The system description paper will be published in the proceedings of the 8th FEV
   + Veracity prediction: We fully fine-tune and quantize an LLM to generate both justifications and verdicts.
 
 # Veracity Prediction Model
-The model checkpoints is available at Hugging Face Hub 🤗
+The model checkpoint is available at Hugging Face Hub 🤗
 
 We fine-tune a 32B model and apply quantization using AWQ.
 
