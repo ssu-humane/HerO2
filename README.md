@@ -51,7 +51,7 @@ system_inference.sh
 ```
 
 # License & Attribution
-The code and dataset are shared under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0).
+The code are shared under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0).
 ```
 @article{yoon2025hero2,
   title={Team HUMANE at AVeriTeC 2025: HerO 2 for Efficient Fact Verification},
