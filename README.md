@@ -27,7 +27,7 @@ We fine-tune a 32B model and apply quantization using AWQ.
 download.sh
 ```
 
-## Configuring Conda-based virtual environment
+## Conda-based Virtual Environment
 ```
 mkdir -p ~/miniconda3
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh
