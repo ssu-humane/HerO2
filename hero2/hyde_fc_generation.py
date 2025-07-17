@@ -142,6 +142,10 @@ def main(args):
     
     # Save results
     print("\nSaving results...")
+    for claim_id, example in enumerate(processed_data):
+        if not example.get("claim_id"):
+            example['claim_id'] = claim_id
+            
     with open(args.json_output, "w", encoding="utf-8") as output_json:
         json.dump(processed_data, output_json, ensure_ascii=False, indent=4)
     

@@ -46,7 +46,7 @@ def main(args):
     )
     tokenizer = llm.get_tokenizer()
 
-    sampling_params = SamplingParams( # https://huggingface.co/Qwen/Qwen3-8B  제안된 하이퍼파라미터
+    sampling_params = SamplingParams(
         temperature=0.7,
         top_p=0.8,
         top_k=20,
@@ -55,7 +55,7 @@ def main(args):
         max_tokens=4096,
     )
     
-    for i in tqdm.tqdm(range(500)):
+    for i in tqdm.tqdm(range(args.num_files)):
         documents, urls = all_documents(f"{args.knowledge_store}/{i}.json")
     
         batch_prompt = []
@@ -87,6 +87,8 @@ if __name__ == "__main__":
     parser.add_argument('--save_path', default='knowledge_store/dev_summary')
     parser.add_argument('--max_input_token_size', type=int ,default=24000)
     parser.add_argument('-m', '--model', default="Qwen/Qwen3-8B")
+    parser.add_argument('--num_files', type=int, default=500)
+    
     args = parser.parse_args()
     main(args)
   
